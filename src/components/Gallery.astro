@@ -1,0 +1,33 @@
+---
+import { type Pictures, type Picture } from "../types/image";
+const data = await fetch("https://picsum.photos/v2/list");
+
+const photos = (await data.json()) as Picture[];
+console.log(photos);
+---
+
+<section
+  class="landing-section bg-black h-screen w-screen overflow-hidden relative"
+  data-header-color="white"
+>
+  <div class="z-30 relative text-center">
+    <h2 class="text-white pt-40 ml-8 text-[40px] font-medium">Galeria</h2>
+    <p class="text-white text-lg ml-8 mt-10">
+      Conocenos por nuestros resultados.
+    </p>
+  </div>
+  <div class="z-30 relative text-center">
+    <div class="flex flex-wrap">
+      {
+        photos.map((photo) => (
+          <div class="w-full max-w-160px m-4">
+            {<img src={photo?.download_url} width={400}/>}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="absolute top-0 bottom-0 h-full w-full z-10">
+    <img class="object-center object-cover w-full" src="./black_wall.jpg" />
+  </div>
+</section>
