@@ -1,0 +1,28 @@
+---
+import Section from "./Section.astro";
+---
+
+<section
+  class="landing-section bg-black h-screen w-screen text-center overflow-hidden relative"
+  data-header-color="white"
+>
+  <div class="z-30 relative h-full flex flex-col">
+    <header>
+      <h2 class={`text-white pt-40 text-[40px] font-medium`}>
+        MAGIC FITNESS NUTRITION THANK YOU PAIN
+      </h2>
+      <p class={`text-white text-sm`}>
+        GIMNASIO EN EL VALLE DE TUMBACO QUITO-ECUADOR
+      </p>
+    </header>
+  </div>
+  <div class="absolute top-0 bottom-0 h-full w-full z-10">
+    <video
+      class="object-center object-cover h-full w-full"
+      autoplay
+      muted
+      loop
+      src="/water_drink.webm" 
+      />
+  </div>
+</section>
