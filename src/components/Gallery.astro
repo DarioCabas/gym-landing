@@ -16,25 +16,25 @@ console.log(photos);
       Conocenos por nuestros resultados.
     </p>
   </div>
-  <div class="z-30 relative text-center">
+  <div class="z-30 relative items-center mt-20 lg:mt-40 m-24">
     <div class="bg-transparent">
-      <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <div class=" grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {
-            photos.map((photo) => (
-              <div class="group relative">
-                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                  <img src={photo?.download_url} alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-                </div>
-              </div>
-            ))
-          }
-        </div>
+      <div class="flex overflow-x-auto scroll-snap-type-x-mandatory carousel w-full">
+        {
+          photos?.map((image) => (
+            <div class="flex-shrink-0 w-72 scroll-snap-align-start mr-4">
+              <img
+                src={image.download_url}
+                alt={image.author}
+                class="w-full h-80  rounded-lg shadow-lg mb-4 hover:scale-110 transition duration-500 cursor-pointer object-cover"
+              />
+              <p class="text-lg font-semibold">{image.author}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
-    
   </div>
   <div class="absolute top-0 bottom-0 h-full w-full z-10">
-    <img class="object-center object-cover w-full" src="./black_wall.jpg" />
+    <img class="object-center object-cover w-full h-full" src="./black_wall.jpg" />
   </div>
 </section>

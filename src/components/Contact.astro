@@ -1,0 +1,79 @@
+---
+import { type Pictures, type Picture } from "../types/image";
+import Link from "../components/ui/Link.astro";
+import { Icon } from "astro-icon";
+---
+
+<section
+  class="landing-section bg-black h-screen w-screen overflow-hidden relative"
+  data-header-color="white"
+>
+  <div class="z-30 relative text-center">
+    <h2 class="text-white pt-20 ml-8 text-[40px] font-medium">
+      Ubicación y contacto
+    </h2>
+    <p class={`text-white text-md ml-8 mt-10`}>
+      Estamos ubicados en el valle de Cumbaya-Tumbaco
+    </p>
+
+    <div class="container p-6 px-6 mx-auto mt-10">
+      <div class="mb-16 text-center">
+        <h2 class="text-base font-semibold tracking-wide text-black uppercase">
+          Horarios
+        </h2>
+        <p
+          class="mt-2 text-sm font-extrabold leading-8 tracking-tight text-gray-900 dark:text-white sm:text-xl"
+        >
+          Lunes a Viernes: 5:00 - 12:00 | 15:00 - 20:00
+        </p>
+        <p
+          class="mt-2 text-sm font-extrabold leading-8 tracking-tight text-gray-900 dark:text-white sm:text-xl"
+        >
+          Sabados: 6:00 - 12:00
+        </p>
+      </div>
+      <div class="mb-16 text-center">
+        <h2 class="text-base font-semibold tracking-wide text-black uppercase">
+          Sucursal Cumbaya
+        </h2>
+        <p
+          class="mt-2 text-sm font-extrabold leading-8 tracking-tight text-gray-900 dark:text-white sm:text-xl"
+        >
+          <Link
+            href="#"
+            href="https://www.google.com/maps/dir/-0.2106752,-78.3728449/MAGIC+FITNESS+NUTRITION+CUMBAYA+TUMBACO,+Av.+Oswaldo+Guayasam%C3%ADn+129,+Quito+170904/@-0.2106073,-78.4245126,19.32z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x91d5914a4ad0c51b:0xea52c57e594605d8!2m2!1d-78.4246!2d-0.2106586?entry=ttu"
+            target="_blank"
+            class="flex gap-1 items-center justify-center"
+            rel="noopener"
+          >
+            Obtener dirección
+          </Link>
+        </p>
+      </div>
+      <div class="mb-16 text-center">
+        <h2 class="text-base font-semibold tracking-wide text-black uppercase">
+          Sucursal Tumbaco
+        </h2>
+        <p
+          class="mt-2 text-sm font-extrabold leading-8 tracking-tight text-gray-900 dark:text-white sm:text-xl"
+        >
+          <Link
+            href="#"
+            href="https://www.google.com/maps/dir//RJ2F%2B2PM+Hilacril+Plaza/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x91d59359bf76e789:0x9afeae7d44548d78?sa=X&ved=2ahUKEwjU-pm__e6BAxUXkWoFHV2TCYIQ48ADegQIChAA&ved=2ahUKEwjU-pm__e6BAxUXkWoFHV2TCYIQ48ADegQIFxAL"
+            target="_blank"
+            class="flex gap-1 items-center justify-center"
+            rel="noopener"
+          >
+            Obtener dirección
+          </Link>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="absolute top-0 bottom-0 h-full w-full z-10">
+    <img
+      class="object-center object-cover w-full h-full"
+      src="./black_wall.jpg"
+    />
+  </div>
+</section>
